@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nusa Wings — Island Hopper</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.min.js"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app"></div>
+<div id="hud">
+  <div id="topLeft" class="panel">
+    <div class="big"><span class="lab">ALT</span><span id="alt">0</span><span class="unit">ft</span></div>
+    <div class="big"><span class="lab">SPD</span><span id="spd">0</span><span class="unit">kt</span></div>
+    <div class="big"><span class="lab">HDG</span><span id="hdg">090</span><span class="unit">°</span></div>
+  </div>
+  <div id="topCenter" class="panel">
+    <div id="missionName">Mission 1 — Cargo Run</div>
+    <div id="missionBrief"></div>
+    <div id="stageText"></div>
+    <div id="missionTimer"></div>
+  </div>
+  <div id="topRight" class="panel">
+    <div id="score">SCORE 0</div>
+    <div id="best">BEST 0</div>
+    <div id="viewLabel">CHASE</div>
+  </div>
+  <div id="waypoint">
+    <div id="waypointArrow">➤</div>
+    <div id="waypointDist">—</div>
+  </div>
+  <div id="warning" class="hidden"></div>
+  <div id="message" class="hidden"></div>
+  <div id="bottomLeft" class="panel">
+    <div class="barRow"><span id="throttleLabel">THR 0%</span><div class="bar"><div id="throttleFill"></div></div></div>
+    <div class="barRow"><span id="fuelLabel">FUEL 100%</span><div class="bar"><div id="fuelFill"></div></div></div>
+    <div class="barRow"><span id="damageLabel">DMG 0%</span><div class="bar"><div id="damageFill"></div></div></div>
+    <div id="flags"><span id="flapsState">flaps</span><span id="gearState" class="on">GEAR</span></div>
+    <div id="fuelWarn" class="hidden">LOW FUEL — LAND TO REFUEL</div>
+  </div>
+  <div id="bottomRight" class="panel">
+    <canvas id="minimap" width="190" height="190"></canvas>
+  </div>
+  <canvas id="gauges" width="460" height="110"></canvas>
+</div>
+<div id="screen" class="hidden">
+  <h1 id="screenTitle">NUSA WINGS</h1>
+  <p id="screenSub"></p>
+  <p id="screenHint"></p>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
